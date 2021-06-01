@@ -141,9 +141,9 @@ namespace Cur
             UpdateForm();
 
             chart1.Series[0].Points.AddXY(Stock.Days, Stock.Rate);
-            chart1.ChartAreas[0].AxisX.ScaleView.Size = 15;
-            if (Stock.Days <= 15) return;
-            chart1.ChartAreas[0].AxisX.ScrollBar.Axis.ScaleView.Position = Stock.Days - 15;
+            chart1.ChartAreas[0].AxisX.ScaleView.Size = 10;
+            if (Stock.Days <= 10) return;
+            chart1.ChartAreas[0].AxisX.ScrollBar.Axis.ScaleView.Position = Stock.Days - 10;
         }
     }
 
@@ -151,8 +151,8 @@ namespace Cur
     {
         public static double Rate;
         public static int Days;
-        private const double Sigma = 0.5;
-        private const double Mu = 0.1;
+        private const double Sigma = 0.459;
+        private const double Mu = 0.201;
         static double dt = 0.1;
         private static readonly Random Random = new Random();
 
